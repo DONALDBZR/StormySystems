@@ -1,0 +1,91 @@
+/* Brandon Grotesque */
+@font-face {
+    font-family: "Brandon Grotesque";
+    src: url("../Fonts/Brandon Grotesque - Black.otf");
+    src: url("../Fonts/Brandon Grotesque - Bold Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Light Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Light.otf");
+    src: url("../Fonts/Brandon Grotesque - Medium Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Thin Italic.otf");
+}
+/* CSS Variables */
+:root {
+    --BrandonGrotesque: "Brandon Grotesque";
+    --ProximaNova: "Proxima Nova";
+    --BackgroundColor1: rgb(0, 0, 0);
+    --BackgroundColor2: rgb(40, 47, 64);
+    --BackgroundColor3: rgb(0, 64, 255);
+    --ForegroundColor: rgb(255, 255, 255);
+    --TextNeonColor: rgb(0, 255, 255);
+    --FormColor1: rgba(0, 0, 0, 0.75);
+    --FormColor2: rgba(0, 0, 0, 0.5);
+    --GradientColor: rgba(0, 0, 0, 0);
+    --Failure: rgb(255, 0, 0);
+    --Success: rgb(0, 255, 0);
+    --Bold: 700;
+    --ExtraBold: 800;
+    --Horizontal: 100%;
+    --Vertical: 100%;
+    --FontSize: 100%;
+    --LogoHeight: 41.2px;
+    --CanvasHeight: 565px;
+    --ParagraphInitialColor: rgba(255, 255, 255, 0.5);
+    --SNSLogoHeight: 47.5px;
+    --TextAreaHeight: 30px;
+    /* Page Styling configuration */
+    background-color: var(--BackgroundColor1);
+    font-size: var(--FontSize);
+    width: var(--Horizontal);
+    height: var(--Vertical);
+}
+/* Navigation Bar */
+nav {
+    color: var(--ForegroundColor);
+    display: flex;
+    justify-content: space-evenly;
+}
+a {
+    font-size: calc(var(--FontSize) * 2);
+    color: var(--ForegroundColor);
+    text-decoration: none;
+    font-family: var(--BrandonGrotesque);
+    font-weight: var(--ExtraBold);
+}
+a:hover {
+    text-decoration: underline;
+}
+/* Logo */
+.Logo {
+    width: auto;
+    height: var(--LogoHeight);
+}
+/* Animation */
+canvas {
+    width: var(--Horizontal);
+    height: var(--CanvasHeight);
+}
+/* Styling configurations for User Interface was applied to "display: none;" as it is annoying on mobile. */
+#gui {
+    right: 0;
+    position: fixed;
+    bottom: 0;
+    display: none;
+}
+/* Media Queries to fit on a screen of a smartphone on portrait mode */
+@media screen and (max-width: 360px) {
+    /* Adjusting links for mobile use */
+    a {
+        font-size: calc(var(--FontSize) * 0.86);
+    }
+}
+/* Media Queries to fit on a screen of a smartphone on landscape mode */
+@media screen and (max-height: 360px) {
+    a {
+        font-size: calc(var(--FontSize) * 1.46);
+    }
+    canvas {
+        height: calc(var(--CanvasHeight) * (294 / 565));
+        width: var(--Horizontal);
+    }
+}

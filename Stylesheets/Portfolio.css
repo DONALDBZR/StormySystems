@@ -1,0 +1,139 @@
+/* Brandon Grotesque */
+@font-face {
+    font-family: "Brandon Grotesque";
+    src: url("../Fonts/Brandon Grotesque - Black.otf");
+    src: url("../Fonts/Brandon Grotesque - Bold Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Light Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Light.otf");
+    src: url("../Fonts/Brandon Grotesque - Medium Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Thin Italic.otf");
+}
+/* Proxima Nova */
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../Fonts/Proxima Nova.otf");
+    src: url("../Fonts/Proxima Nova - Alternate.otf");
+}
+/* CSS Variables declaration */
+:root {
+    --BrandonGrotesque: "Brandon Grotesque";
+    --ProximaNova: "Proxima Nova";
+    --BackgroundColor1: rgb(0, 0, 0);
+    --BackgroundColor2: rgb(40, 47, 64);
+    --BackgroundColor3: rgb(0, 64, 255);
+    --ForegroundColor: rgb(255, 255, 255);
+    --TextNeonColor: rgb(0, 255, 255);
+    --FormColor1: rgba(0, 0, 0, 0.75);
+    --FormColor2: rgba(0, 0, 0, 0.5);
+    --GradientColor: rgba(0, 0, 0, 0);
+    --Failure: rgb(255, 0, 0);
+    --Success: rgb(0, 255, 0);
+    --Bold: 700;
+    --ExtraBold: 800;
+    --Horizontal: 100%;
+    --Vertical: 100%;
+    --FontSize: 100%;
+    --LogoHeight: 41.2px;
+    --CanvasHeight: 565px;
+    --ParagraphInitialColor: rgba(255, 255, 255, 0.5);
+    --SNSLogoHeight: 47.5px;
+    --TextAreaHeight: 30px;
+    /* Page's styling configurations */
+    background-color: var(--BackgroundColor2);
+    width: var(--Horizontal);
+    height: var(--Vertical);
+    color: var(--ForegroundColor);
+    font-size: var(--FontSize);
+}
+/* Navigation Bar */
+nav {
+    color: var(--ForegroundColor);
+    display: flex;
+    justify-content: space-evenly;
+}
+nav a {
+    font-size: calc(var(--FontSize) * 2);
+    color: var(--ForegroundColor);
+    text-decoration: none;
+    font-family: var(--BrandonGrotesque);
+    font-weight: var(--ExtraBold);
+}
+nav a:hover {
+    text-decoration: underline;
+}
+/* Logo */
+.Logo {
+    width: auto;
+    height: var(--LogoHeight);
+}
+/* Heading */
+h1 {
+    font-size: calc(var(--FontSize) * 2);
+    font-family: var(--BrandonGrotesque);
+    font-weight: var(--Bold);
+    text-align: center;
+}
+h2 {
+    font-size: calc(var(--FontSize) * 1.8);
+    font-family: var(--BrandonGrotesque);
+    font-weight: var(--Bold);
+}
+/* Paragraphs */
+p {
+    font-family: var(--ProximaNova);
+    font-size: calc(var(--FontSize) * 1.62);
+    color: var(--ParagraphInitialColor);
+}
+p:hover {
+    color: var(--ForegroundColor);
+}
+li {
+    color: var(--ParagraphInitialColor);
+}
+li:hover {
+    color: var(--ForegroundColor);
+}
+.Education {
+    list-style: none;
+}
+.DownloadButtons {
+    width: calc(var(--Horizontal) / 3);
+    margin: calc(var(--Vertical) * 0) calc(var(--Horizontal) / 3);
+    text-align: center;
+}
+.CV {
+    font-size: calc(var(--FontSize) * 2);
+    color: var(--ForegroundColor);
+    text-decoration: none;
+    font-family: var(--BrandonGrotesque);
+    font-weight: var(--ExtraBold);
+    text-align: center;
+}
+.CV:hover {
+    color: var(--BackgroundColor2);
+    background-color: var(--ForegroundColor);
+    padding: calc(var(--Vertical) * 0) calc(var(--Horizontal) * 0.05);
+}
+/* Media Queries to fit on a screen of a smartphone on portrait mode */
+@media screen and (max-width: 360px) {
+    /* Adjusting links for mobile use */
+    a {
+        font-size: calc(var(--FontSize) * 0.86);
+    }
+    h1 {
+        font-size: calc(var(--FontSize) * 1.18);
+    }
+    h2 {
+        font-size: calc(var(--FontSize) * 1.06);
+    }
+    p {
+        font-size: calc(var(--FontSize) * 0.86);
+    }
+}
+/* Media Queries to fit on a screen of a smartphone on landscape mode */
+@media screen and (max-height: 360px) {
+    a {
+        font-size: calc(var(--FontSize) * 1.46);
+    }
+}

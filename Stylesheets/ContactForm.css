@@ -1,0 +1,152 @@
+/* Brandon Grotesque */
+@font-face {
+    font-family: "Brandon Grotesque";
+    src: url("../Fonts/Brandon Grotesque - Black.otf");
+    src: url("../Fonts/Brandon Grotesque - Bold Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Light Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Light.otf");
+    src: url("../Fonts/Brandon Grotesque - Medium Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Thin Italic.otf");
+}
+/* Proxima Nova */
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../Fonts/Proxima Nova.otf");
+    src: url("../Fonts/Proxima Nova - Alternate.otf");
+}
+/* CSS Variables declaration */
+:root {
+    --BrandonGrotesque: "Brandon Grotesque";
+    --ProximaNova: "Proxima Nova";
+    --BackgroundColor1: rgb(0, 0, 0);
+    --BackgroundColor2: rgb(40, 47, 64);
+    --BackgroundColor3: rgb(0, 64, 255);
+    --ForegroundColor: rgb(255, 255, 255);
+    --TextNeonColor: rgb(0, 255, 255);
+    --FormColor1: rgba(0, 0, 0, 0.75);
+    --FormColor2: rgba(0, 0, 0, 0.5);
+    --GradientColor: rgba(0, 0, 0, 0);
+    --Failure: rgb(255, 0, 0);
+    --Success: rgb(0, 255, 0);
+    --Bold: 700;
+    --ExtraBold: 800;
+    --Horizontal: 100%;
+    --Vertical: 100%;
+    --FontSize: 100%;
+    --LogoHeight: 41.2px;
+    --CanvasHeight: 565px;
+    --ParagraphInitialColor: rgba(255, 255, 255, 0.5);
+    --SNSLogoHeight: 47.5px;
+    --TextAreaHeight: 30px;
+    /* Page's styling configurations */
+    background-color: var(--BackgroundColor3);
+    color: var(--ForegroundColor);
+    font-size: var(--FontSize);
+    margin: calc(var(--Horizontal) * 0);
+    font-family: sans-serif;
+}
+/* Navigation Bar */
+nav {
+    color: var(--ForegroundColor);
+    display: flex;
+    justify-content: space-evenly;
+    width: var(--Horizontal);
+}
+/* Logo */
+.Logo {
+    width: auto;
+    height: var(--LogoHeight);
+}
+/* Links */
+a {
+    font-size: calc(var(--FontSize) * 2);
+    color: var(--ForegroundColor);
+    text-decoration: none;
+    font-family: var(--BrandonGrotesque);
+    font-weight: var(--ExtraBold);
+}
+a:hover {
+    text-decoration: underline;
+}
+/* Mailing Form */
+.MailingForm {
+    background-color: var(--ForegroundColor);
+    width: calc(var(--Horizontal) * 0.7);
+    height: calc(var(--Vertical) * 0.85);
+    margin: 2.5% 10%;
+    padding: calc(var(--FontSize) * 0.05);
+}
+h1 {
+    font-size: calc(var(--FontSize) * 2);
+    color: var(--FormColor1);
+    font-family: var(--ProximaNova);
+    font-weight: var(--ExtraBold);
+}
+p {
+    font-size: var(--FontSize);
+    color: var(--FormColor2);
+}
+/* Sender's information */
+.SendersInformation {
+    display: flex;
+}
+#Name,
+#Email {
+    width: calc(var(--Horizontal) * 0.475);
+    font-size: var(--FontSize);
+    margin: calc(var(--Horizontal) * 0.025);
+}
+#Name {
+    margin-left: 0;
+}
+#Email {
+    margin-right: 0;
+}
+textarea {
+    width: var(--Horizontal);
+    height: calc(var(--TextAreaHeight) * 8);
+    font-size: var(--FontSize);
+}
+#SendMail {
+    font-size: calc(var(--FontSize) * 1.46);
+    color: var(--ForegroundColor);
+    background-color: var(--BackgroundColor3);
+    border: none;
+    padding: 2.5% 10%;
+    font-weight: var(--ExtraBold);
+    margin-left: calc(var(--Horizontal) * 0.34);
+    font-family: var(--ProximaNova);
+}
+/* Messages */
+.Success {
+    color: var(--Success);
+    font-size: calc(var(--FontSize) * 2);
+    text-align: center;
+}
+.Failure {
+    color: var(--Failure);
+    font-size: calc(var(--FontSize) * 2);
+    text-align: center;
+}
+/* Media Queries to fit on a screen of a smartphone on portrait mode */
+@media screen and (max-width: 360px) {
+    nav a {
+        font-size: calc(var(--FontSize) * 0.86);
+    }
+    textarea {
+        height: calc(var(--TextAreaHeight) * (16 / 3));
+    }
+    #SendMail {
+        margin-left: calc(var(--Horizontal) * 0.18);
+    }
+}
+/* Media Queries to fit on a screen of a smartphone on landscape mode */
+@media screen and (max-height: 360px) {
+    nav a {
+        font-size: calc(var(--FontSize) * 1.46);
+    }
+    #SendMail {
+        margin-left: calc(var(--Horizontal) * 0.26);
+    }
+}

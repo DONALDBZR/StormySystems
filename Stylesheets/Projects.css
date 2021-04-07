@@ -1,0 +1,225 @@
+/* Brandon Grotesque */
+@font-face {
+    font-family: "Brandon Grotesque";
+    src: url("../Fonts/Brandon Grotesque - Black.otf");
+    src: url("../Fonts/Brandon Grotesque - Bold Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Light Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Light.otf");
+    src: url("../Fonts/Brandon Grotesque - Medium Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Thin Italic.otf");
+}
+/* Proxima Nova */
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../Fonts/Proxima Nova.otf");
+    src: url("../Fonts/Proxima Nova - Alternate.otf");
+}
+/* CSS Variables declaration */
+:root {
+    --BrandonGrotesque: "Brandon Grotesque";
+    --ProximaNova: "Proxima Nova";
+    --BackgroundColor1: rgb(0, 0, 0);
+    --BackgroundColor2: rgb(40, 47, 64);
+    --BackgroundColor3: rgb(0, 64, 255);
+    --ForegroundColor: rgb(255, 255, 255);
+    --TextNeonColor: rgb(0, 255, 255);
+    --FormColor1: rgba(0, 0, 0, 0.75);
+    --FormColor2: rgba(0, 0, 0, 0.5);
+    --GradientColor: rgba(0, 0, 0, 0);
+    --Failure: rgb(255, 0, 0);
+    --Success: rgb(0, 255, 0);
+    --Bold: 700;
+    --ExtraBold: 800;
+    --Horizontal: 100%;
+    --Vertical: 100%;
+    --FontSize: 100%;
+    --LogoHeight: 41.2px;
+    --CanvasHeight: 565px;
+    --ParagraphInitialColor: rgba(255, 255, 255, 0.5);
+    --SNSLogoHeight: 47.5px;
+    --TextAreaHeight: 30px;
+    /* Page's styling configurations */
+    background-color: var(--BackgroundColor1);
+    color: var(--ForegroundColor);
+    margin: calc(var(--Horizontal) * 0);
+    font-family: sans-serif;
+}
+/* Navigation Bar */
+nav {
+    color: var(--ForegroundColor);
+    display: flex;
+    justify-content: space-evenly;
+    background-image: radial-gradient(
+        var(--BackgroundColor2),
+        var(--GradientColor)
+    );
+    width: var(--Horizontal);
+}
+nav:hover {
+    background: var(--BackgroundColor1);
+}
+a {
+    font-size: calc(var(--FontSize) * 2);
+    color: var(--ForegroundColor);
+    text-decoration: none;
+    font-family: var(--BrandonGrotesque);
+    font-weight: var(--ExtraBold);
+}
+a:hover {
+    color: var(--BackgroundColor1);
+    text-shadow: 0px 0px 8px var(--TextNeonColor);
+}
+/* Logo */
+.Logo {
+    width: auto;
+    height: var(--LogoHeight);
+}
+/* Title */
+.Title {
+    font-size: calc(var(--FontSize) * 2);
+    font-family: var(--BrandonGrotesque);
+    font-weight: var(--ExtraBold);
+    text-align: center;
+}
+.Projects {
+    display: flex;
+    margin: calc(var(--Vertical) * 0.01) calc(var(--Horizontal) * 0);
+}
+.ProjectsTitle,
+.ProjectsDetails {
+    width: calc(var(--Horizontal) / 2);
+}
+.Name,
+.Description,
+.Link,
+.SourceCodes {
+    display: flex;
+    width: var(--Horizontal);
+    margin: 2% 0%;
+}
+h2,
+p {
+    margin: 0;
+}
+.Name:hover,
+.Description:hover,
+.Link:hover {
+    border-bottom: 1px solid var(--ForegroundColor);
+}
+.SourceCodes:hover {
+    border-top: 1px solid var(--ForegroundColor);
+}
+#ProjectsTitle {
+    width: var(--Horizontal);
+    height: auto;
+}
+#Name,
+#Description,
+#Link,
+#SourceCodes {
+    width: calc(var(--Horizontal) * 0.5);
+    font-family: var(--BrandonGrotesque);
+    font-weight: var(--ExtraBold);
+    font-size: calc(var(--FontSize) * 1.8);
+}
+#ProjectsName,
+#ProjectsLink,
+#ProjectsSourceCodes {
+    width: calc(var(--Horizontal) * 0.5);
+    font-family: var(--ProximaNova);
+    font-weight: var(--ExtraBold);
+    font-size: calc(var(--FontSize) * 1.8);
+    color: var(--ParagraphInitialColor);
+}
+#ProjectsDescription {
+    width: calc(var(--Horizontal) * 0.5);
+    font-family: var(--ProximaNova);
+    font-weight: var(--ExtraBold);
+    font-size: var(--FontSize);
+    color: var(--ParagraphInitialColor);
+}
+#ProjectsName:hover,
+#ProjectsDescription:hover,
+#ProjectsLink:hover,
+#ProjectsSourceCodes:hover {
+    color: var(--ForegroundColor);
+    text-shadow: 0px 0px 8px var(--TextNeonColor);
+}
+.GitHub {
+    width: calc(var(--Horizontal) * 0.25);
+    height: auto;
+    opacity: 50%;
+}
+.GitHub:hover {
+    opacity: 100%;
+}
+/* Media Queries to fit on a screen of a smartphone on portrait mode */
+@media screen and (max-width: 360px) {
+    /* Adjusting links for mobile use */
+    a {
+        font-size: calc(var(--FontSize) * 0.86);
+    }
+    h1 {
+        font-size: calc(var(--FontSize) * 1.18);
+    }
+    h2 {
+        font-size: calc(var(--FontSize) * 1.31);
+        margin: 0;
+    }
+    p {
+        font-size: calc(var(--FontSize) * 1.18);
+        margin: 0;
+    }
+    #ProjectsTitle {
+        width: var(--Horizontal);
+        height: auto;
+    }
+    #Name,
+    #Description,
+    #Link {
+        font-size: calc(var(--FontSize) * 1.06);
+    }
+    #SourceCodes {
+        font-size: calc(var(--FontSize) * 0.9);
+    }
+    #ProjectsName,
+    #ProjectsLink {
+        font-size: calc(var(--FontSize) * 0.73);
+    }
+    #ProjectsSourceCodes {
+        font-size: var(--FontSize);
+    }
+    #ProjectsDescription {
+        font-size: calc(var(--FontSize) * 0.59);
+    }
+    .Name,
+    .Description,
+    .Link,
+    .SourceCodes {
+        margin: 1% 0;
+    }
+}
+/* Media Queries to fit on a screen of a smartphone on landscape mode */
+@media screen and (max-height: 360px) {
+    nav a {
+        font-size: calc(var(--FontSize) * 1.46);
+    }
+    h2,
+    p {
+        margin: 0;
+    }
+    #SourceCodes {
+        font-size: calc(var(--FontSize) * 1.62);
+    }
+    #ProjectsName,
+    #ProjectsLink {
+        font-size: calc(var(--FontSize) * 1.31);
+    }
+    .Name,
+    .Description,
+    .Link,
+    .SourceCodes {
+        margin: 1% 0;
+    }
+}

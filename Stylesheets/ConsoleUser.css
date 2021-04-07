@@ -1,0 +1,206 @@
+/* Brandon Grotesque */
+@font-face {
+    font-family: "Brandon Grotesque";
+    src: url("../Fonts/Brandon Grotesque - Black.otf");
+    src: url("../Fonts/Brandon Grotesque - Bold Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Light Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Light.otf");
+    src: url("../Fonts/Brandon Grotesque - Medium Italic.otf");
+    src: url("../Fonts/Brandon Grotesque - Thin Italic.otf");
+}
+/* Proxima Nova */
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../Fonts/Proxima Nova.otf");
+    src: url("../Fonts/Proxima Nova - Alternate.otf");
+}
+/* CSS Variables declaration */
+:root {
+    --BrandonGrotesque: "Brandon Grotesque";
+    --ProximaNova: "Proxima Nova";
+    --BackgroundColor1: rgb(0, 0, 0);
+    --BackgroundColor2: rgb(40, 47, 64);
+    --BackgroundColor3: rgb(0, 64, 255);
+    --ForegroundColor: rgb(255, 255, 255);
+    --TextNeonColor: rgb(0, 255, 255);
+    --FormColor1: rgba(0, 0, 0, 0.75);
+    --FormColor2: rgba(0, 0, 0, 0.5);
+    --GradientColor: rgba(0, 0, 0, 0);
+    --Failure: rgb(255, 0, 0);
+    --Success: rgb(0, 255, 0);
+    --Bold: 700;
+    --ExtraBold: 800;
+    --Horizontal: 100%;
+    --Vertical: 100%;
+    --FontSize: 100%;
+    --LogoHeight: 41.2px;
+    --CanvasHeight: 565px;
+    --ParagraphInitialColor: rgba(255, 255, 255, 0.5);
+    --SNSLogoHeight: 47.5px;
+    --TextAreaHeight: 30px;
+    /* Page's styling configurations */
+    background-color: var(--BackgroundColor1);
+    color: var(--ForegroundColor);
+    font-size: var(--FontSize);
+    margin: 0;
+    font-family: sans-serif;
+}
+/* Header */
+header {
+    display: flex;
+    width: var(--Horizontal);
+    justify-content: space-evenly;
+    margin-bottom: calc(var(--Vertical) * 0.01);
+}
+/* Logo */
+.Logo {
+    width: auto;
+    height: var(--LogoHeight);
+}
+/* User Online */
+h4,
+header a {
+    font-size: calc(var(--FontSize) * 1.46);
+    font-family: var(--BrandonGrotesque);
+    font-weight: var(--ExtraBold);
+    color: var(--ForegroundColor);
+    text-decoration: none;
+    margin: calc(var(--Vertical) * 0);
+}
+h4 {
+    color: var(--Success);
+}
+header a:hover {
+    text-shadow: 0px 0px 8px var(--TextNeonColor);
+}
+h1 {
+    font-family: var(--ProximaNova);
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    margin-bottom: calc(var(--Vertical) * 0.01);
+}
+/* Select Form Button */
+.Select {
+    width: var(--Horizontal);
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: calc(var(--Vertical) * 0.01);
+}
+#Select {
+    font-size: calc(var(--FontSize) * 1.46);
+    color: var(--BackgroundColor1);
+    background-color: var(--ForegroundColor);
+    border: none;
+    padding: calc(var(--Vertical) * 0.01) calc(var(--Horizontal) * 0.025);
+    font-weight: var(--ExtraBold);
+    font-family: var(--ProximaNova);
+}
+#Select:hover {
+    color: var(--ForegroundColor);
+    background-color: var(--BackgroundColor1);
+}
+/* User Table */
+.Users {
+    margin: calc(var(--Vertical) * 0.01) calc(var(--Horizontal) * 0.025);
+    background-color: var(--ForegroundColor);
+    padding: calc(var(--Vertical) * 0.01);
+    color: var(--BackgroundColor1);
+}
+table {
+    width: var(--Horizontal);
+}
+tr {
+    width: var(--Horizontal);
+}
+th,
+td {
+    width: calc(var(--Horizontal) / 6);
+}
+table,
+tr,
+th,
+td {
+    border: 1px solid var(--BackgroundColor1);
+    background-color: var(--BackgroundColor1);
+}
+th,
+td {
+    background-color: var(--ForegroundColor);
+}
+.Forms {
+    width: var(--Horizontal);
+    display: flex;
+}
+/* Form to delete and update users from the database */
+.DeleteForm,
+.UpdateForm {
+    background-color: var(--ForegroundColor);
+    width: calc(var(--Horizontal) * 0.35);
+    margin: calc(var(--Vertical) * 0.025) calc(var(--Horizontal) * 0.05);
+    padding: calc(var(--Vertical) * 0.01) calc(var(--Horizontal) * 0.025);
+}
+.DeleteForm #Username {
+    width: var(--Horizontal);
+}
+/* Guide */
+h2 {
+    font-family: var(--BrandonGrotesque);
+    font-size: calc(var(--FontSize) * 1.8);
+    color: var(--FormColor1);
+    margin: 0;
+    margin-bottom: calc(var(--Vertical) * 0.01);
+}
+p {
+    font-family: var(--BrandonGrotesque);
+    font-size: var(--FontSize);
+    color: var(--FormColor2);
+    margin: 0;
+    margin-bottom: calc(var(--Vertical) * 0.01);
+    font-weight: var(--ExtraBold);
+}
+#Delete,
+#Update {
+    font-size: calc(var(--FontSize) * 1.46);
+    color: var(--ForegroundColor);
+    background-color: var(--BackgroundColor1);
+    border: none;
+    padding: calc(var(--Vertical) * 0.01) calc(var(--Horizontal) * 0.025);
+    font-weight: var(--ExtraBold);
+    font-family: var(--ProximaNova);
+    margin-top: calc(var(--Vertical) * 0.01);
+    margin-left: calc(var(--Horizontal) * 0.44);
+}
+#Delete:hover,
+#Update:hover {
+    color: var(--BackgroundColor1);
+    background-color: var(--ForegroundColor);
+}
+.UserTypes,
+.Names,
+.Credentials {
+    width: var(--Horizontal);
+    display: flex;
+    margin: calc(var(--Vertical) * 0.01) calc(var(--Horizontal) * 0);
+}
+#Username,
+#Type,
+#FirstName,
+#LastName,
+#Email,
+#Password {
+    margin: calc(var(--Vertical) * 0) calc(var(--Horizontal) * 0.025);
+    width: calc(var(--Horizontal) * 0.475);
+    font-size: var(--FontSize);
+}
+#Username,
+#FirstName,
+#Email {
+    margin-left: 0;
+}
+#Type,
+#LastName,
+#Password {
+    margin-right: 0;
+}
