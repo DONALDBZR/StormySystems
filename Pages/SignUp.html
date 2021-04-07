@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stormy Systems</title>
+        <link
+            rel="stylesheet"
+            href="http://stormysystem.ddns.net/StormySystems/Stylesheets/SignUp.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="http://stormysystem.ddns.net/StormySystems/Images/Logo.ico"
+            type="image/x-icon"
+        />
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav>
+            <!-- Logo -->
+            <div class="Logo">
+                <a href="http://stormysystem.ddns.net/StormySystems/index.php">
+                    <img
+                        src="http://stormysystem.ddns.net/StormySystems/Images/Logo.png"
+                        alt="Logo"
+                        class="Logo"
+                    />
+                </a>
+            </div>
+            <!-- Links -->
+            <div class="NavigationBar">
+                <a
+                    href="http://stormysystem.ddns.net/StormySystems/Portfolio/index.php"
+                >
+                    Portfolio
+                </a>
+            </div>
+            <div class="NavigationBar">
+                <a
+                    href="http://stormysystem.ddns.net/StormySystems/Projects/index.php"
+                >
+                    Projects
+                </a>
+            </div>
+            <div class="NavigationBar">
+                <a
+                    href="http://stormysystem.ddns.net/StormySystems/Services/index.php"
+                >
+                    Services
+                </a>
+            </div>
+            <div class="NavigationBar">
+                <a
+                    href="http://stormysystem.ddns.net/StormySystems/ContactUs/index.php"
+                >
+                    Contact
+                </a>
+            </div>
+            <div class="NavigationBar">
+                <a
+                    href="http://stormysystem.ddns.net/StormySystems/Contributors/index.php"
+                >
+                    Contributor
+                </a>
+            </div>
+        </nav>
+        <!-- Sign Up Form -->
+        <div class="SignUp">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account!</p>
+            <form action="" method="post">
+                <!-- Form: Names -->
+                <div class="FullName">
+                    <input
+                        type="text"
+                        name="FirstName"
+                        id="FirstName"
+                        placeholder="First Name"
+                        required
+                    />
+                    <input
+                        type="text"
+                        name="LastName"
+                        id="LastName"
+                        placeholder="Last Name"
+                        required
+                    />
+                </div>
+                <!-- Form: Usernames -->
+                <div class="Usernames">
+                    <input
+                        type="text"
+                        name="Username"
+                        id="Username"
+                        placeholder="Username"
+                        required
+                    />
+                    <select name="Type" id="Type">
+                        <option value="Contributor">Contributor</option>
+                        <option value="Administrator">Administrator</option>
+                    </select>
+                </div>
+                <input
+                    type="email"
+                    name="Email"
+                    id="Email"
+                    placeholder="Email"
+                    required
+                />
+                <input
+                    type="password"
+                    name="Password"
+                    id="Password"
+                    placeholder="Password"
+                    required
+                />
+                <input
+                    type="password"
+                    name="ConfirmPassword"
+                    id="ConfirmPassword"
+                    placeholder="Confirm Password"
+                    required
+                />
+                <input
+                    type="submit"
+                    value="Sign Up"
+                    id="SignUp"
+                    name="SignUp"
+                />
+            </form>
+        </div>
+        <!-- Login section -->
+        <p class="LoginSection">
+            Already have an account?
+            <a
+                href="http://stormysystem.ddns.net/StormySystems/Contributors/Login/index.php"
+            >
+                Login Here
+            </a>
+        </p>
+    </body>
+</html>

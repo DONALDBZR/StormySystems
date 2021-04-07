@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stormy Systems</title>
+        <link rel="stylesheet" href="../Stylesheets/ContactForm.css" />
+        <link
+            rel="shortcut icon"
+            href="../Images/Logo.ico"
+            type="image/x-icon"
+        />
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav>
+            <!-- Logo -->
+            <div class="Logo">
+                <a href="../index.php">
+                    <img src="../Images/Logo.png" alt="Logo" class="Logo" />
+                </a>
+            </div>
+            <!-- Links -->
+            <div class="NavigationBar">
+                <a href="../Portfolio/index.php"> Portfolio </a>
+            </div>
+            <div class="NavigationBar">
+                <a href="../Projects/index.php"> Projects </a>
+            </div>
+            <div class="NavigationBar">
+                <a href="../Services/index.php"> Services </a>
+            </div>
+            <div class="NavigationBar">
+                <a href="../ContactUs/index.php"> Contact </a>
+            </div>
+            <div class="NavigationBar">
+                <a href="../Contributors/index.php"> Contributor </a>
+            </div>
+        </nav>
+        <!-- Mailing Form -->
+        <div class="MailingForm">
+            <h1>Mailing Form</h1>
+            <p>Please fill in this form to file a request!</p>
+            <form method="post">
+                <!-- Sender's information -->
+                <div class="SendersInformation">
+                    <input
+                        type="text"
+                        name="Name"
+                        id="Name"
+                        placeholder="Name"
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="Email"
+                        id="Email"
+                        placeholder="Email"
+                        required
+                    />
+                </div>
+                <textarea
+                    name="Message"
+                    id="Message"
+                    placeholder="Message"
+                    required
+                ></textarea>
+                <input
+                    type="submit"
+                    value="Send Mail"
+                    id="SendMail"
+                    name="SendMail"
+                />
+            </form>
+        </div>
+    </body>
+</html>
